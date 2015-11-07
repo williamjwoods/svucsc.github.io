@@ -14,6 +14,19 @@
         <script src='js/moment.min.js'></script>
         <script src='js/fullcalendar.min.js'></script>
         <script src='js/gcal.js'></script>
+        $('#calendar').fullCalendar({
+    {
+        center: 'agendaThreeDay' // buttons for switching between views
+    },
+    views: {
+        agendaThreeDay: {
+            type: 'agenda',
+            duration: { days: 3 },
+            buttonText: '3 day'
+        }
+    },
+    defaultView:'agendaThreeDay'
+});
         <script>
             $(document).ready(function() {
                 $('#calendar').fullCalendar({
@@ -30,7 +43,7 @@
                     views: {
             
                         month: {
-                            eventLimit: 4 // adjust to 5 only for month view
+                            eventLimit: 5 // adjust to 5 only for month view
                         }
                     }
                 });
